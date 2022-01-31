@@ -1,0 +1,287 @@
+<figure>
+  <form class="form">
+    <fieldset>
+      <h3 class="title" #label>Contact Form</h3>
+
+      <mat-form-field [formGroup]="myformControl">
+        <mat-label>{{ form.name }}</mat-label>
+        <input
+          matInput
+          formControlName="name"
+          type="text"
+          name="name"
+          #name
+          autocomplete="off"
+        />
+        <mat-error
+          *ngIf="
+            myformControl.invalid &&
+            !myformControl.get('name')?.getError('required')
+          "
+        >
+          {{ errors.name }}
+        </mat-error>
+        <mat-error *ngIf="myformControl.get('name')?.getError('required')">
+          <strong>{{ form.name }} required</strong>
+        </mat-error>
+        <i
+          #icon
+          [ngClass]="{
+            'far fa-check-circle ok': !myformControl.get('name')?.invalid,
+            'fas fa-times-circle fail':
+              myformControl.get('name')?.invalid &&
+              !myformControl.get('name')?.getError('required'),
+            '':
+              myformControl.get('name')?.invalid &&
+              myformControl.get('name')?.getError('required')
+          }"
+        ></i>
+      </mat-form-field>
+
+      <mat-form-field [formGroup]="myformControl">
+        <mat-label>{{ form.surname }}</mat-label>
+        <input
+          matInput
+          formControlName="surname"
+          type="text"
+          name="surname"
+          #surname
+          autocomplete="off"
+        />
+        <mat-error
+          *ngIf="
+            myformControl.invalid &&
+            !myformControl.get('surname')?.getError('required')
+          "
+        >
+          {{ errors.surname }}
+        </mat-error>
+        <mat-error *ngIf="myformControl.get('surname')?.getError('required')">
+          <strong>{{ form.surname }} required</strong>
+        </mat-error>
+        <i
+          #icon
+          [ngClass]="{
+            'far fa-check-circle ok': !myformControl.get('surname')?.invalid,
+            'fas fa-times-circle fail':
+              myformControl.get('surname')?.invalid &&
+              !myformControl.get('surname')?.getError('required'),
+            '':
+              myformControl.get('surname')?.invalid &&
+              myformControl.get('surname')?.getError('required')
+          }"
+        ></i>
+      </mat-form-field>
+
+      <br />
+
+      <mat-form-field [formGroup]="myformControl">
+        <mat-label>{{ form.dni }}</mat-label>
+        <input
+          matInput
+          formControlName="dni"
+          type="text"
+          name="dni"
+          #dni
+          autocomplete="off"
+          min="12"
+          max="150"
+          step="1"
+        />
+        <mat-error
+          *ngIf="
+            myformControl.invalid &&
+            !myformControl.get('dni')?.getError('required')
+          "
+        >
+          {{ errors.dni }}
+        </mat-error>
+        <mat-error *ngIf="myformControl.get('age')?.getError('required')">
+          <strong>{{ form.dni }} required</strong>
+        </mat-error>
+        <i
+          #icon
+          [ngClass]="{
+            'far fa-check-circle ok': !myformControl.get('dni')?.invalid,
+            'fas fa-times-circle fail':
+              myformControl.get('dni')?.invalid &&
+              !myformControl.get('dni')?.getError('required'),
+            '':
+              myformControl.get('dni')?.invalid &&
+              myformControl.get('dni')?.getError('required')
+          }"
+        ></i>
+      </mat-form-field>
+
+      <mat-form-field [formGroup]="myformControl">
+        <mat-label>{{ form.password }}</mat-label>
+        <input
+          matInput
+          formControlName="password"
+          type="password"
+          name="password"
+          #password
+          autocomplete="off"
+        />
+        <mat-error
+          *ngIf="
+            myformControl.invalid &&
+            !myformControl.get('password')?.getError('required')
+          "
+        >
+          {{ errors.password }}
+        </mat-error>
+        <mat-error *ngIf="myformControl.get('password')?.getError('required')">
+          <strong>{{ form.password }} required</strong>
+        </mat-error>
+        <i
+          #icon
+          [ngClass]="{
+            'far fa-check-circle ok': !myformControl.get('password')?.invalid,
+            'fas fa-times-circle fail':
+              myformControl.get('password')?.invalid &&
+              !myformControl.get('password')?.getError('required'),
+            '':
+              myformControl.get('password')?.invalid &&
+              myformControl.get('password')?.getError('required')
+          }"
+        ></i>
+      </mat-form-field>
+
+      <br />
+      <mat-form-field [formGroup]="myformControl">
+        <mat-label>{{ form.phone }}</mat-label>
+        <input
+          matInput
+          formControlName="phone"
+          type="text"
+          name="phone"
+          #phone
+          autocomplete="off"
+        />
+        <mat-error
+          *ngIf="
+            myformControl.invalid &&
+            !myformControl.get('phone')?.getError('required')
+          "
+        >
+          {{ errors.phone }}
+        </mat-error>
+        <mat-error *ngIf="myformControl.get('phone')?.getError('required')">
+          <strong>{{ form.phone }} required</strong>
+        </mat-error>
+        <i
+          #icon
+          [ngClass]="{
+            'far fa-check-circle ok': !myformControl.get('phone')?.invalid,
+            'fas fa-times-circle fail':
+              myformControl.get('phone')?.invalid &&
+              !myformControl.get('phone')?.getError('required'),
+            '':
+              myformControl.get('phone')?.invalid &&
+              myformControl.get('phone')?.getError('required')
+          }"
+        ></i>
+      </mat-form-field>
+
+      <mat-form-field [formGroup]="myformControl">
+        <mat-label>{{ form.gender }}</mat-label>
+        <input
+          matInput
+          formControlName="gender"
+          type="text"
+          name="gender"
+          #gender
+          autocomplete="off"
+        />
+        <mat-error
+          *ngIf="
+            myformControl.invalid &&
+            !myformControl.get('gender')?.getError('required')
+          "
+        >
+          {{ errors.gender }}
+        </mat-error>
+        <mat-error *ngIf="myformControl.get('gender')?.getError('required')">
+          <strong>{{ form.gender }} required</strong>
+        </mat-error>
+        <i
+          #icon
+          [ngClass]="{
+            'far fa-check-circle ok': !myformControl.get('gender')?.invalid,
+            'fas fa-times-circle fail':
+              myformControl.get('gender')?.invalid &&
+              !myformControl.get('gender')?.getError('required'),
+            '':
+              myformControl.get('gender')?.invalid &&
+              myformControl.get('gender')?.getError('required')
+          }"
+        ></i>
+      </mat-form-field>
+      <br />
+      <mat-form-field [formGroup]="myformControl">
+        <mat-label>{{ form.address }}</mat-label>
+        <input
+          matInput
+          formControlName="address"
+          type="text"
+          name="address"
+          #address
+          autocomplete="off"
+        />
+        <mat-error
+          *ngIf="
+            myformControl.invalid &&
+            !myformControl.get('address')?.getError('required')
+          "
+        >
+          {{ errors.address }}
+        </mat-error>
+        <mat-error *ngIf="myformControl.get('address')?.getError('required')">
+          <strong>{{ form.address }} required</strong>
+        </mat-error>
+        <i
+          #icon
+          [ngClass]="{
+            'far fa-check-circle ok': !myformControl.get('address')?.invalid,
+            'fas fa-times-circle fail':
+              myformControl.get('address')?.invalid &&
+              !myformControl.get('address')?.getError('required'),
+            '':
+              myformControl.get('address')?.invalid &&
+              myformControl.get('address')?.getError('required')
+          }"
+        ></i>
+      </mat-form-field>
+
+      <div class="divButt">
+        <input
+          type="button"
+          class="butt"
+          name="send"
+          value="{{ form.send }}"
+          (click)="
+            register({
+              id: '',
+              name: name.value,
+              surname: surname.value,
+              dni: dni.value,
+              password: password.value,
+              phone: phone.value,
+              gender: gender.value,
+              address: address.value
+            })
+          "
+        />
+
+        <input
+          type="button"
+          class="butt"
+          name="reset"
+          value="{{ form.reset }}"
+          (click)="resetForm()"
+        />
+      </div>
+    </fieldset>
+  </form>
+</figure>

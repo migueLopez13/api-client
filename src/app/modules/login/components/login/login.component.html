@@ -1,0 +1,33 @@
+<figure>
+  <form class="form">
+    <fieldset>
+      <h3 class="title" #label>Login Form</h3>
+
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput type="text" name="name" #name autocomplete="off" />
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          type="password"
+          name="password"
+          #password
+          autocomplete="off"
+        />
+      </mat-form-field>
+
+      <div class="divButt">
+        <input
+          type="button"
+          class="butt"
+          name="send"
+          value="Login"
+          (click)="login(name.value, password.value)"
+        />
+      </div>
+    </fieldset>
+  </form>
+</figure>
