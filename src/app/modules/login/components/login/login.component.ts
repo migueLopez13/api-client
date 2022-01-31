@@ -14,9 +14,7 @@ export class LoginComponent implements OnInit {
     private readonly router: Router
   ) {}
 
-  ngOnInit(): void {
-    this.contactService.getContacts();
-  }
+  ngOnInit(): void {}
 
   login(name: string, password: string): void {
     const validation = this.contactService.validateUser(name, password);

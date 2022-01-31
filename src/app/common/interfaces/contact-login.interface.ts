@@ -1,4 +1,4 @@
 export interface ContactLogin {
-  id: string;
+  name: string;
   password: string;
 }
