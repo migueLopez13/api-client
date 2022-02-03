@@ -19,7 +19,7 @@ export const COUNTRIES: any = {
       surname: 'Surname must have a min of 3 characters',
       dni: 'Please set valid DNI whit a letter.',
       password: 'Password must have a min of 3 characters .',
-      gender: "You must set 'Man' or 'Woman'",
+      gender: "You must set 'Male' or 'Female'",
       address: 'Address must have a min of 3 characters',
       phone: 'You must set a valid phone number.',
     },

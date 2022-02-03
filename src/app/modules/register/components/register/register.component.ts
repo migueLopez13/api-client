@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ContactService } from 'src/app/shared/services/contact.service';
+import { ControlGroupService } from 'src/app/shared/services/control-group.service';
 import { COUNTRIES } from '../../../../common/constants';
 import { ContactDTO } from '../../../../common/dto/contact.dto';
-import { ControlGroupService } from '../../../../common/services/control-group.service';
-import { errorsForm, labelsForm } from '../../../../common/types';
-import { ContactService } from 'src/app/common/services/contact.service';
+import { errorsForm, labelsForm } from '../../../../common/interfaces/types';
 
 @Component({
   selector: 'app-register',

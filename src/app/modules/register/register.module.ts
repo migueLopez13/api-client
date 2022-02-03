@@ -8,10 +8,10 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatRadioModule } from '@angular/material/radio';
 import { RegisterRouting } from './register-routing.module';
-import { ControlGroupService } from '../../common/services/control-group.service';
-import { RepositoryService } from '../../common/services/repository.service';
 import { RegisterComponent } from './components/register/register.component';
-import { ContactService } from 'src/app/common/services/contact.service';
+import { ContactService } from 'src/app/shared/services/contact.service';
+import { ControlGroupService } from 'src/app/shared/services/control-group.service';
+import { RepositoryService } from 'src/app/shared/services/repository.service';
 
 @NgModule({
   declarations: [RegisterComponent],

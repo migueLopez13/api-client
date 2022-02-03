@@ -1,2 +1,10 @@
-<p>home works!</p>
-tu tokken: {{ userToken }}
+<p class="title">Your Profile:</p>
+<section class="profile" *ngIf="contact">
+  <article><a class="property">Name:</a>{{ contact.name }}</article>
+  <article><a class="property">Surname:</a>{{ contact.surname }}</article>
+  <article><a class="property">DNI:</a>{{ contact.dni }}</article>
+  <article><a class="property">Phone:</a>{{ contact.phone }}</article>
+  <article><a class="property">Gender:</a>{{ contact.gender }}</article>
+  <article><a class="property">Address:</a>{{ contact.address }}</article>
+</section>
+<input type="button" value="logout" (click)="logout()">

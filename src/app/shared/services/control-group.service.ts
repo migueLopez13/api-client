@@ -34,7 +34,7 @@ export class ControlGroupService {
         Validators.required,
       ],
     ],
-    gender: ['', [Validators.pattern(/Man|Woman/), Validators.required]],
+    gender: ['', [Validators.pattern(/Male|Female/), Validators.required]],
     address: [
       '',
       [Validators.minLength(3), Validators.maxLength(255), Validators.required],

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Token } from 'src/app/common/dto/tokken.dto';
-import { ContactService } from 'src/app/common/services/contact.service';
+import { ContactService } from 'src/app/shared/services/contact.service';
+import { StorageService } from 'src/app/shared/services/storage.service';
 
 @Component({
   selector: 'app-login',
@@ -11,6 +12,7 @@ import { ContactService } from 'src/app/common/services/contact.service';
 export class LoginComponent implements OnInit {
   constructor(
     private readonly contactService: ContactService,
+    private readonly storageService: StorageService,
     private readonly router: Router
   ) {}
 
@@ -22,9 +24,8 @@ export class LoginComponent implements OnInit {
 
     validation.subscribe((data) => {
       userToken = data as Token;
-
       if (userToken) {
-        localStorage.setItem('token', userToken.access_token);
+        this.storageService.setToken(userToken.access_token)
         this.router.navigate(['/home']);
       }
     });
